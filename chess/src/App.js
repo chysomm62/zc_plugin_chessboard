@@ -15,7 +15,7 @@ import Acceptchallenge from "./components/Modals/Accept_chalengeModal/acceptchal
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/chess">
         <Switch>
           <Route exact path="/" render={HomePage} />
           <Route exact path="/game" render={MainGame} />
