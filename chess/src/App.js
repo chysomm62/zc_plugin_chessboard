@@ -6,10 +6,11 @@ import MainGame from "./Pages/GameScreen/MainGame.js";
 import Modal from "./components/Modals/ModalPage/Modal";
 import InviteModal from "./components/Modals/InviteModal/InviteModal";
 import TestModal from "./components/Modals/AcceptDeclineModal/Test";
-import Acceptchalengemodal from "./components/Modals/Accept_chalengeModal/accept_chalenge_modal";
+
 import Games from "./components/Games/Games";
 import GameScreenWithoutComments from "./Pages/GameScreen1/GameScreen1";
 import Rules from "./Pages/Rules/Rules";
+import Acceptchallenge from "./components/Modals/Accept_chalengeModal/acceptchalenge";
 
 function App() {
   return (
@@ -38,11 +39,9 @@ function App() {
           <Route exact path="/inviteplayer">
             <InviteModal />
           </Route>
-          <Route
-            exact
-            path="/Accept_chalengeModal"
-            render={Acceptchalengemodal}
-          />
+          <Route exact path="/acceptchallenge">
+            <Acceptchallenge />
+          </Route>
           <Route exact path="/rules">
             <Rules />
           </Route>

@@ -10,41 +10,42 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
-  background-color: #2d2d2d;
-  opacity: 0.7;
+  background-color: #2d2d2d8e;
 }
 
 .modalContainer {
   background-color: rgba(255, 255, 255, 1);
   text-align: center;
-  padding: 3rem;
+  padding: 6rem;
   font-family: "lato", sans-serif;
+  opacity: 1;
 }
 
 .acceptHeader {
   padding: 0.5rem;
   padding: 1rem;
+  background-color: inherit;
 }
 
 .acceptHeader div img {
-  width: 10%;
+  width: 20%;
 }
 
 .main p {
   font-size: 1.25rem;
   color: #505050;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .acceptbtns {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
 .acceptbtns button {
   padding: 0.75rem;
-  min-width: 5rem;
+  min-width: 40%;
   font-size: 0.75rem;
   border-radius: 3px;
   outline: none;
@@ -55,7 +56,18 @@
   background-color: #27ae60;
   border: 1px solid #27ae60;
 }
+.acceptbtns .green_btn:hover {
+  background-color: white;
+  color: #27ae60;
+  border: 1px solid #27ae60;
+}
 .acceptbtns .white_btn {
   color: #b8003c;
+  background-color: white;
+  border: 1px solid #b8003c;
+}
+.acceptbtns .white_btn:hover {
+  background-color: #b8003c;
+  color: white;
   border: 1px solid #b8003c;
 }
