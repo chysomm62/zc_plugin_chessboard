@@ -2,6 +2,7 @@
 const path = require("path");
 require("express-async-errors");
 const express = require("express");
+const request = require("request");
 const router = require("./src/routes/index");
 const { PORT } = require("./src/config");
 const errorMiddleware = require("./src/middlewares/error.middleware");
@@ -33,25 +34,6 @@ preRouteMiddlewares(app);
 
 // All Endpoints routes for backend are defined here
 app.use("/api", router);
-
-// temporary - to be removed
-app.get("/test", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-// temporary - to be removed, for testing purposess
-app.use("/img/chesspieces/wikipedia/*", (req, res) => {
-  res.sendFile(
-    path.join(
-      __dirname,
-      "public",
-      "img",
-      "chesspieces",
-      "wikipedia",
-      path.basename(req.originalUrl)
-    )
-  );
-});
 
 // Error middlewares
 errorMiddleware(app);
