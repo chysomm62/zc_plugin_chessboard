@@ -15,6 +15,9 @@ import imageProfileOne from "../../assets/header/imageProfileOne.png";
 import imageProfileTwo from "../../assets/header/imageProfileTwo.png";
 import imageProfileThree from "../../assets/header/imageProfileThree.png";
 
+// import modal for showing topbar content
+import Titlecontent from "./title_content";
+
 const Profile = ({ className, src }) => {
   return (
     <div className={className}>
@@ -27,8 +30,13 @@ const Profile = ({ className, src }) => {
 };
 
 function Header({ gameData }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [show, setContent] = useState(false);
+  const showTitle = () => {
+    setContent(true);
+    <Titlecontent show={show}></Titlecontent>;
+  };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleViewAllSpectatorsModal = () => {
     setIsModalOpen(true);
   };
@@ -57,6 +65,8 @@ function Header({ gameData }) {
     thumbnailUrl: [imageProfileOne, imageProfileTwo, imageProfileThree], //Replace with images of users
     userCount: padLeadingZeros(numUsers(), 3), //User count on header
     eventTitle: () => {
+      showTitle();
+
       //Block of code to be triggered on title click
     },
     eventThumbnail: () => {
